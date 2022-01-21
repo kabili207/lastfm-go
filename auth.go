@@ -55,3 +55,13 @@ func (client *Client) Login(username string, password string) (err error) {
 func (client *Client) Logout() {
 	client.sessionKey = ""
 }
+
+// Logout clears the current web service session and logs the user out of LastFM
+func (client *Client) SessionKey() string {
+	return client.sessionKey
+}
+
+// Logout clears the current web service session and logs the user out of LastFM
+func (client *Client) SetSessionKey(sessionKey string) {
+	client.sessionKey = sessionKey
+}
